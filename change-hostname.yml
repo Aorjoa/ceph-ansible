@@ -1,0 +1,6 @@
+---
+- hosts: mons
+  tasks:
+  - name: change hostname
+    shell: echo {{ ansible_eth0.ipv4.address }} | awk -F '.' '{print "rack-"$3"-node-"$4}' > /etc/hostname
+
