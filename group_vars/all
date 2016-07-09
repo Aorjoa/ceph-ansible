@@ -187,7 +187,7 @@ ceph_stable: true # use ceph stable branch
 # generated, you may find it useful to disable fsid generation to
 # avoid cluttering up your ansible repo. If you set `generate_fsid` to
 # false, you *must* generate `fsid` in another way.
-fsid: 61c10c05-09cc-4cf3-ae2e-4acd603a15a7
+fsid: 61c10c05-09cc-4cf3-ae2e-4acd603axxx
 #generate_fsid: true
 
 #cephx: true
