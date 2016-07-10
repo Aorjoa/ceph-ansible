@@ -64,7 +64,9 @@ public_network = {{ public_network }}
 osd max object name len = 256
 osd max object namespace len = 64 
 osd client message size cap = 104857600
-osd client message cap = 25 
+osd client message cap = 25
+osd pool default pg num = 2000
+osd pool default pgp num = 2000
 {% if filestore_xattr_use_omap != None %}
 filestore xattr use omap = {{ filestore_xattr_use_omap }}
 {% elif osd_mkfs_type == "ext4" %}
