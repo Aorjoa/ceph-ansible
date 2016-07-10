@@ -55,18 +55,18 @@ osd mkfs type = {{ osd_mkfs_type }}
 osd mkfs options xfs = {{ osd_mkfs_options_xfs }}
 osd mount options xfs = {{ osd_mount_options_xfs }}
 osd journal size = {{ journal_size }}
+osd max object name len = 256
+osd max object namespace len = 64
+osd client message size cap = 104857600
+osd client message cap = 25
+osd pool default pg num = 2000
+osd pool default pgp num = 2000
 {% if cluster_network is defined %}
 cluster_network = {{ cluster_network }}
 {% endif %}
 {% if public_network is defined %}
 public_network = {{ public_network }}
 {% endif %}
-osd max object name len = 256
-osd max object namespace len = 64 
-osd client message size cap = 104857600
-osd client message cap = 25
-osd pool default pg num = 2000
-osd pool default pgp num = 2000
 {% if filestore_xattr_use_omap != None %}
 filestore xattr use omap = {{ filestore_xattr_use_omap }}
 {% elif osd_mkfs_type == "ext4" %}
